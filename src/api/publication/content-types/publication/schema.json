@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "publications",
+  "info": {
+    "singularName": "publication",
+    "pluralName": "publications",
+    "displayName": "Publication",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "ANONIM",
+        "OPEN",
+        "REGULAR",
+        "IMPORTANT"
+      ]
+    },
+    "tegs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::teg.teg",
+      "inversedBy": "publications"
+    },
+    "isLike": {
+      "type": "boolean"
+    },
+    "publications": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::publication.publication"
+    },
+    "complaints": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::complaint.complaint",
+      "mappedBy": "publication"
+    },
+    "attachments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::attachment.attachment"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "publications"
+    }
+  }
+}

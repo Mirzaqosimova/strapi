@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "achievements",
+  "info": {
+    "singularName": "achievement",
+    "pluralName": "achievements",
+    "displayName": "Achievement",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "date": {
+      "type": "date"
+    },
+    "isSertificate": {
+      "type": "boolean"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "achievements"
+    },
+    "attachment": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::attachment.attachment"
+    },
+    "occupations": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::occupation.occupation",
+      "inversedBy": "achievements"
+    }
+  }
+}

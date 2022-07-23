@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tegs",
+  "info": {
+    "singularName": "teg",
+    "pluralName": "tegs",
+    "displayName": "Teg",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sympthom": {
+      "type": "string"
+    },
+    "publications": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::publication.publication",
+      "mappedBy": "tegs"
+    },
+    "position": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::postion.postion",
+      "inversedBy": "tegs"
+    }
+  }
+}

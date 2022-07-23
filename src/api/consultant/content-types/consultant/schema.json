@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "consultants",
+  "info": {
+    "singularName": "consultant",
+    "pluralName": "consultants",
+    "displayName": "Consultant",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "consultants"
+    }
+  }
+}
