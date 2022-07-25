@@ -34,12 +34,6 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::attachment.attachment"
-    },
-    "occupations": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::occupation.occupation",
-      "inversedBy": "achievements"
     }
   }
 }

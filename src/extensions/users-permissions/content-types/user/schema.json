@@ -82,9 +82,6 @@
     "passportNumber": {
       "type": "string"
     },
-    "avatar": {
-      "type": "string"
-    },
     "address": {
       "type": "relation",
       "relation": "oneToOne",

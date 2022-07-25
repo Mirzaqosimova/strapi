@@ -4,7 +4,8 @@
   "info": {
     "singularName": "address",
     "pluralName": "addresses",
-    "displayName": "Address"
+    "displayName": "Address",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,7 +15,16 @@
     "street": {
       "type": "string"
     },
-    "homeNumber": {
+    "home": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "district": {
       "type": "string"
     }
   }

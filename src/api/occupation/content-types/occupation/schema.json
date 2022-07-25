@@ -27,12 +27,6 @@
       "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
       "mappedBy": "occupations"
-    },
-    "achievements": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::achievement.achievement",
-      "inversedBy": "occupations"
     }
   }
 }
